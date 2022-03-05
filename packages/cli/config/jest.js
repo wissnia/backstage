@@ -112,7 +112,7 @@ async function getProjectConfig(targetPath, displayName) {
     },
 
     // A bit more opinionated
-    testMatch: ['**/?(*.)test.{js,jsx,ts,tsx,mjs,cjs}'],
+    testMatch: ['**/*.test.{js,jsx,ts,tsx,mjs,cjs}'],
 
     transformIgnorePatterns: [`/node_modules/(?:${transformIgnorePattern})/`],
   };
@@ -188,6 +188,8 @@ async function getRootConfig() {
 
   return {
     rootDir: targetPath,
+    coverageProvider: 'v8',
+    collectCoverageFrom: ['**/*.{js,jsx,ts,tsx,mjs,cjs}', '!**/*.d.ts'],
     projects: configs,
   };
 }
