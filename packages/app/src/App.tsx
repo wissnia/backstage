@@ -83,7 +83,7 @@ import { searchPage } from './components/search/SearchPage';
 import { providers } from './identityProviders';
 import * as plugins from './plugins';
 
-import { techDocsPage } from '@backstage/plugin-techdocs-mkdocs';
+import { techDocsReaderPage } from '@backstage/plugin-techdocs-mkdocs';
 import { ApacheAirflowPage } from '@backstage/plugin-apache-airflow';
 import { PermissionedRoute } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common';
@@ -173,7 +173,7 @@ const routes = (
       path="/docs/:namespace/:kind/:name/*"
       element={<TechDocsReaderPage />}
     >
-      {techDocsPage}
+      {techDocsReaderPage}
     </Route>
     <Route
       path="/create"
