@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import { RESOURCE_TYPE_CATALOG_ENTITY } from '@backstage/plugin-catalog-common';
+
 export type {
   LocationService,
   RefreshService,
@@ -25,3 +27,9 @@ export { createRouter } from './createRouter';
 export type { RouterOptions } from './createRouter';
 export type { CatalogEnvironment } from './CatalogBuilder';
 export { CatalogBuilder } from './CatalogBuilder';
+
+/**
+ * Testing re-export issue.
+ * @alpha
+ */
+export type TestType = Record<string, typeof RESOURCE_TYPE_CATALOG_ENTITY>;
