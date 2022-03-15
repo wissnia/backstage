@@ -16,7 +16,7 @@ import { Entity } from '@backstage/catalog-model';
 import { EntityPolicy } from '@backstage/catalog-model';
 import { GetEntitiesRequest } from '@backstage/catalog-client';
 import { JsonValue } from '@backstage/types';
-import { Logger as Logger_2 } from 'winston';
+import { Logger } from 'winston';
 import { Permission } from '@backstage/plugin-permission-common';
 import { PermissionAuthorizer } from '@backstage/plugin-permission-common';
 import { PermissionCondition } from '@backstage/plugin-permission-common';
@@ -166,7 +166,7 @@ export const catalogConditions: Conditions<{
 
 // @public (undocumented)
 export type CatalogEnvironment = {
-  logger: Logger_2;
+  logger: Logger;
   database: PluginDatabaseManager;
   config: Config;
   reader: UrlReader;
@@ -275,14 +275,14 @@ export type CatalogRulesEnforcer = {
 export class CodeOwnersProcessor implements CatalogProcessor {
   constructor(options: {
     integrations: ScmIntegrationRegistry;
-    logger: Logger_2;
+    logger: Logger;
     reader: UrlReader;
   });
   // (undocumented)
   static fromConfig(
     config: Config,
     options: {
-      logger: Logger_2;
+      logger: Logger;
       reader: UrlReader;
     },
   ): CodeOwnersProcessor;
@@ -656,7 +656,7 @@ export const processingResult: Readonly<{
 
 // @public (undocumented)
 export class UrlReaderProcessor implements CatalogProcessor {
-  constructor(options: { reader: UrlReader; logger: Logger_2 });
+  constructor(options: { reader: UrlReader; logger: Logger });
   // (undocumented)
   getProcessorName(): string;
   // (undocumented)
