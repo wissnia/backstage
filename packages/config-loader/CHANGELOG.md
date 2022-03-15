@@ -1,5 +1,11 @@
 # @backstage/config-loader
 
+## 0.9.8
+
+### Patch Changes
+
+- f910c2a3f8: build(deps): bump `typescript-json-schema` from 0.52.0 to 0.53.0
+
 ## 0.9.7
 
 ### Patch Changes
