@@ -1,5 +1,5 @@
 ---
-'@backstage/plugin-techdocs-node': patch
+'@backstage/plugin-techdocs-node': minor
 ---
 
 Deprecations cleaned up.
